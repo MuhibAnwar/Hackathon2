@@ -194,3 +194,62 @@ body {
   height: 379.17px
   
 }
+
+/* Base styles for mobile devices */
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 1rem;
+}
+
+/* Styles for tablets and larger screens */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  .container {
+    padding: 2rem;
+  }
+}
+
+/* Styles for desktops */
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.item {
+  flex: 1 1 calc(100% - 1rem); /* 1 column on mobile */
+}
+
+@media (min-width: 768px) {
+  .item {
+    flex: 1 1 calc(50% - 1rem); /* 2 columns on tablets */
+  }
+}
+
+@media (min-width: 1024px) {
+  .item {
+    flex: 1 1 calc(25% - 1rem); /* 4 columns on desktops */
+  }
+}
+img, video {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,64 +1,54 @@
 import React from "react";
+import { CiSearch } from "react-icons/ci";
+import { HiOutlineShoppingBag } from "react-icons/hi";
+import { IoPersonOutline } from "react-icons/io5";
+
+
 
 export const Navbar = () => {
   return (
-    <header id="navbar" className="bg-black py-4">
+    <header id="navbar" className="bg-black py-2">
       {/* Navbar Container */}
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo Section */}
-        <div id="logo" className="text-2xl font-bold text-white">
-          Food <span className="text-[#FF9F0D]">tuck</span>
+        <div id="logo" className="text-2xl font-bold text-white space-x-1">
+          <h2>
+          Food <span className="text-[#FF9F0D]">tuck</span></h2>
         </div>
 
         {/* Navigation Links */}
         <nav className="hidden md:flex gap-8 text-white">
-          <a href="#home" className="hover:text-yellow-500">
+          <a href="/homepage" className="hover:text-yellow-500">
             Home
           </a>
-          <a href="#Ourchefs" className="hover:text-yellow-500">
+          <a href="/menu" className="hover:text-yellow-500">
             Menu
           </a>
-          <a href="#Blog" className="hover:text-yellow-500">
+          <a href="/blog" className="hover:text-yellow-500">
             Blog
           </a>
-          <a href="#shop" className="hover:text-yellow-500">
+          <a href="#shoplist" className="hover:text-yellow-500">
             Pages
           </a>
-          <a href="#About" className="hover:text-yellow-500">
+          <a href="/about" className="hover:text-yellow-500">
             About
           </a>
-          <a href="#Shop" className="hover:text-yellow-500">
+          <a href="/shopping" className="hover:text-yellow-500">
             Shop
           </a>
-          <a href="#signup" className="hover:text-yellow-500">
+          <a href="/signup" className="hover:text-yellow-500">
             Contact
           </a>
         </nav>
 
         {/* Search Bar */}
-        <div className="relative hidden md:block">
-          <input
-            type="text"
-            placeholder="Search"
-            className="px-4 py-2 rounded-full bg-black border border-yellow-500 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
-          />
-          <span className="absolute top-2.5 right-3 text-yellow-500">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="w-5 h-5"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M21 21l-4.35-4.35M10.5 17a6.5 6.5 0 100-13 6.5 6.5 0 000 13z"
-              />
-            </svg>
-          </span>
-        </div>
+        <div className="flex space-x-4  items-center">
+  <CiSearch href="/menu" className="text-white text-xl cursor-pointer hover:text-yellow-500 transition duration-200" />
+  <IoPersonOutline href="/shopping" className="text-white text-xl cursor-pointer hover:text-yellow-500 transition duration-200" />
+  <HiOutlineShoppingBag href="/shopping" className="text-white text-xl cursor-pointer hover:text-yellow-500 transition duration-200" />
+</div>
+
+
       </div>
     </header>
   );

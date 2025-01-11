@@ -28,15 +28,17 @@ export default function Footer3() {
           <FaInstagram />
           </div>
           <div className="bg-white rounded-square w-10 h-10  space-x-4 flex items-center justify-center">
-          <FaYoutube />
+          <FaYoutube  className="text-orange-500"/>
           </div>
           <div className="bg-white rounded-square w-10 h-10 space-x-4  flex items-center justify-center">
           <FaPinterest />
-          </div>
-
+          </div> 
 </div>
         </div>
+       
       </div>
+     
+
     </footer>
         </div>
     );
