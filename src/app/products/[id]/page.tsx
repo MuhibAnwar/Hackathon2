@@ -5,7 +5,10 @@ import sanityClient from '@sanity/client';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { FaStar } from 'react-icons/fa6';
-import { GetServerSideProps } from 'next';
+
+
+import { useParams } from "next/navigation";
+
 
 
 const sanity = sanityClient({
@@ -27,8 +30,9 @@ interface Product {
 interface PageProps {
   params: { id: string };
 }
-// ✅ Ensure `params` is correctly typed and handledconst ProductDetails = async ({ params }: { params: { id: string } }) => {
-  const ProductDetails = ({ params }: PageProps) => {
+
+const ProductDetails = () => {
+  const params = useParams<{ id: string }>();
   const [product, setProduct] = useState<Product | null>(null);
 
   useEffect(() => {
