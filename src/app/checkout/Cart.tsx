@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
+
 
 
 const Cart = () => {
@@ -10,11 +10,7 @@ const Cart = () => {
     setShipping(!isSameAsShipping);
   };
 
-  const products = [
-    { name: "Chicken Tikka Kabab", price: "50$", weight: "150gm" },
-    { name: "Chicken Tikka Kabab", price: "50$", weight: "150gm" },
-    { name: "Chicken Tikka Kabab", price: "50$", weight: "150gm" },
-  ];
+ 
 
   return (
     <div className="flex flex-col lg:flex-row p-6 lg:p-20 gap-10" style={{ fontFamily: "sans-serif" }}>
@@ -46,38 +42,19 @@ const Cart = () => {
               className="flex-1 p-2 text-[16px] border border-[#ddd]"
             />
           </div>
-          <input
-            type="text"
-            placeholder="Company Name"
-            className="w-full p-2 text-[16px] mb-4 border border-[#ddd]"
-          />
+       
+         
           <div className="flex flex-col lg:flex-row gap-4 mb-4">
-            <select className="flex-1 p-2 text-[16px] border border-[#ddd]">
-              <option>Select Country</option>
-              <option>United States</option>
-              <option>United Kingdom</option>
-            </select>
-            <select className="flex-1 p-2 text-[16px] border border-[#ddd]">
-              <option>Select City</option>
-              <option>California</option>
-              <option>London</option>
-            </select>
-          </div>
-          <div className="flex flex-col lg:flex-row gap-4 mb-4">
+           
             <input
               type="text"
-              placeholder="Zip Code"
-              className="flex-1 p-2 text-[16px] border border-[#ddd]"
-            />
-            <input
-              type="text"
-              placeholder="Address 1"
+              placeholder="District"
               className="flex-1 p-2 text-[16px] border border-[#ddd]"
             />
           </div>
           <input
             type="text"
-            placeholder="Address 2"
+            placeholder="Full Address"
             className="w-full p-2 text-[16px] mb-4 border border-[#ddd]"
           />
           <br/>
@@ -94,59 +71,23 @@ const Cart = () => {
           </div>
         </form>
         <div className="flex justify-between">
-          <button className="px-4 py-2 bg-[#ddd] border cursor-pointer">
+        <a href="/shoplist"><button className="px-4 py-2 bg-[#ddd] border cursor-pointer">
             Back to Cart
           </button>
-          <button className="px-4 py-2 bg-[#ffa500] text-white border cursor-pointer">
-            Proceed to Shipping
-          </button>
+          </a>
+          <button
+  className="px-4 py-2 bg-[#ffa500] text-white border cursor-pointer"
+  onClick={() => {
+    alert('ORDER CONFIRMED'); 
+  }}
+>
+  Proceed to Shipping
+</button>
         </div>
       </div>
 
-      {/* Order Summary Section */}
-      <div className="flex flex-col flex-1 p-6 bg-[#f9f9f9] border rounded shadow-md">
-        <div className="mb-6">
-          {products.map((item, index) => (
-            <div key={index} className="flex items-center mb-4">
-              <Image
-                src="/o.png"
-                alt={item.name}
-                className="w-[60px] h-[70px] mr-4 border"
-              />
-              <div>
-                <p className="font-bold mb-2">{item.name}</p>
-                <p className="mb-1">{item.weight}</p>
-                <p>{item.price}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="mb-6">
-          <p className="flex justify-between mb-2">
-            <span>Sub-total</span>
-            <span>130$</span>
-          </p>
-          <p className="flex justify-between mb-2">
-            <span>Shipping</span>
-            <span>Free</span>
-          </p>
-          <p className="flex justify-between mb-2">
-            <span>Discount</span>
-            <span>25%</span>
-          </p>
-          <p className="flex justify-between mb-2">
-            <span>Tax</span>
-            <span>54.76$</span>
-          </p>
-          <h3 className="flex justify-between font-semibold mt-4">
-            <span>Total</span>
-            <span className="font-bold">432.65$</span>
-          </h3>
-        </div>
-        <button className="w-full px-4 py-2 bg-[#ffa500] text-white rounded cursor-pointer">
-          Place an Order
-        </button>
-      </div>
+    
+    
     </div>
   );
 };

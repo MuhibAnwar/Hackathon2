@@ -18,23 +18,23 @@ export const Navbar = () => {
 
         {/* Navigation Links */}
         <nav className="hidden md:flex gap-8 text-white">
-          <a href="/homepage" className="hover:text-yellow-500">
+          <a href="/HomePage" className="hover:text-yellow-500">
             Home
           </a>
-          <a href="/menu" className="hover:text-yellow-500">
+          <a href="/shoplist" className="hover:text-yellow-500">
             Menu
           </a>
-          <a href="/blog" className="hover:text-yellow-500">
-            Blog
+          <a href="/checkout" className="hover:text-yellow-500">
+            Checkout
           </a>
-          <a href="#shoplist" className="hover:text-yellow-500">
-            Pages
+          <a href="/wishlist" className="hover:text-yellow-500">
+            Wishlist
           </a>
           <a href="/about" className="hover:text-yellow-500">
             About
           </a>
-          <a href="/shopping" className="hover:text-yellow-500">
-            Shop
+          <a href="/shoplist" className="hover:text-yellow-500">
+            Shoping Cart
           </a>
           <a href="/signup" className="hover:text-yellow-500">
             Contact
@@ -43,9 +43,9 @@ export const Navbar = () => {
 
         {/* Search Bar */}
         <div className="flex space-x-4  items-center">
-  <CiSearch href="/menu" className="text-white text-xl cursor-pointer hover:text-yellow-500 transition duration-200" />
-  <IoPersonOutline href="/shopping" className="text-white text-xl cursor-pointer hover:text-yellow-500 transition duration-200" />
-  <HiOutlineShoppingBag href="/shopping" className="text-white text-xl cursor-pointer hover:text-yellow-500 transition duration-200" />
+  <a href="/shoplist"><CiSearch href="/shoplist" className="text-white text-xl cursor-pointer hover:text-yellow-500 transition duration-200" /></a>
+  <a href="/signup"><IoPersonOutline href="/singup" className="text-white text-xl cursor-pointer hover:text-yellow-500 transition duration-200" /></a>
+  <a href="/wishlist"><HiOutlineShoppingBag href="/wishlist" className="text-white text-xl cursor-pointer hover:text-yellow-500 transition duration-200" /></a>
 </div>
 
 

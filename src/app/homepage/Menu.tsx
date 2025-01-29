@@ -49,6 +49,8 @@ export default function Menu() {
         
       </header>
       <main className="px-4 lg:px-32">
+        
+      <a href="/shoplist">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {menuItems.map((item, index) => (
             <div
@@ -56,6 +58,8 @@ export default function Menu() {
               className="flex  flex-wrap items-center justify-between p-4 bg-gray-800 rounded-lg shadow-md"
             >
               <div className="flex items-center space-x-4">
+
+                
                 <Image
                   src={item.image}
                   alt={item.name}
@@ -73,9 +77,12 @@ export default function Menu() {
               <span className="text-xl font-bold text-yellow-400">
                 ${item.price}
               </span>
+       
             </div>
+            
           ))}
         </div>
+        </a>
       </main>
     </div>
   );

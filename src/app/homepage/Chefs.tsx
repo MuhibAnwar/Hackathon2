@@ -77,9 +77,9 @@ export default function MeetOurChefs() {
 
       {/* See More Button */}
       <div className="text-center mt-12">
-        <button className="px-6 py-3 bg-black border border-yellow-500 text-yellow-500 rounded-full font-bold hover:bg-yellow-600 transition duration-300">
+      <a href="/chefs"> <button className="px-6 py-3 bg-black border border-yellow-500 text-yellow-500 rounded-full font-bold hover:bg-yellow-600 transition duration-300">
           See More
-        </button>
+        </button></a>
       </div>
     </div>
   );

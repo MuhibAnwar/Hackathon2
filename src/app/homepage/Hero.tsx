@@ -33,9 +33,11 @@ export default function HomePage() {
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius sed pharetra dictum neque massa congue.
     </p>
     <div className="flex flex-col md:flex-row items-center md:items-start">
-      <button className="bg-yellow-500 text-white w-[100px] h-[30px] md:w-[190px] md:h-[60px] rounded-[40px]  hover:bg-black hover:text-[#FF9F0D]">
+    <a href="/shoplist"> <button  className="bg-yellow-500 text-white w-[100px] h-[30px] md:w-[190px] md:h-[60px] rounded-[40px]  hover:bg-black hover:text-[#FF9F0D]">
         See More
       </button>
+    </a>
+
       </div>
       </div>
     </div>

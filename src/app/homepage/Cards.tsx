@@ -15,7 +15,7 @@ export default function Cards() {
       {/* Chef Cards */}
       <div className="flex flex-wrap justify-center gap-6 px-6">
         {/* Chef 1 */}
-        <div className="bg-black text-white border  border-white  shadow-lg overflow-hidden w-64">          <Image
+      <a href="/shoplist"> <div className="bg-black text-white border  border-white  shadow-lg overflow-hidden w-64">          <Image
             src="/w1.png"
             alt="Chef D.Estwood"
             width={256}
@@ -28,9 +28,12 @@ export default function Cards() {
             <h3 className="text-lg font-bold">Pellentesque Non Efficitur Mi Aliquam Convallis Mi Quis</h3>
             <p className="text-sm text-gray-500">Learn More</p>
           </div>
+      
         </div>
+        </a>
 
         {/* Chef 2 */}
+        <a href="/shoplist"> 
         <div className="bg-black text-white border border-white shadow-lg overflow-hidden w-64">
           <Image
             src="/s6.png"
@@ -46,8 +49,10 @@ export default function Cards() {
             <p className="text-sm text-gray-500">Learn More</p>
           </div>
         </div>
+       </a>
 
         {/* Chef 3 */}
+        <a href="/shoplist"> 
         <div className="bg-black  text-white border border-white shadow-lg overflow-hidden w-64">
           <Image
             src="/w.png"
@@ -61,8 +66,10 @@ export default function Cards() {
             <h3 className="text-lg font-bold">Curabitur rutrum velit ac congue malesuada</h3>
             <p className="text-sm text-gray-500 mt-6">Learn More</p>
           </div>
-        </div>
 
+        </div>
+        </a>
+        
         
         
         </div>
