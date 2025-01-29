@@ -1,5 +1,4 @@
 'use client';
-
 import Image from 'next/image';
 import sanityClient from '@sanity/client';
 import Link from 'next/link';
@@ -27,9 +26,7 @@ interface Product {
   imageUrl: string;
   tags: string[];
 }
-interface PageProps {
-  params: { id: string };
-}
+
 
 const ProductDetails = () => {
   const params = useParams<{ id: string }>();
