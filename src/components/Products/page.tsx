@@ -79,7 +79,7 @@ const ProductCards: React.FC = () => {
               <div className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
                 <Image
                 src={product.imageUrl}
-                alt={product.title}
+                alt={'10'}
                 /*  src={image.link || product.imageUrl}
                   alt={image.title || product.title}*/
                   className="object-cover w-full h-48"
@@ -140,7 +140,7 @@ const ProductCards: React.FC = () => {
                   </div>
                   <Image
 src={item.imageUrl}
-alt={item.title}
+alt={'20'}
                     width={50}
                     height={50}
                     className="rounded-md"
